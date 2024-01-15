@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <title>Landing Page</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4; 
+      color: #333;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #ffffff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: rgb(174, 179, 181), 79, 79;
+    }
+
+    #dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    #dropdownContent {
+      display: none;
+      position: absolute;
+      background-color: rgba(228, 228, 228, 0.9); /* Slightly transparent white */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 1;
+    }
+
+    #dropdownContent.show {
+      display: block;
+    }
+
+    label, input, select, button {
+      margin-bottom: 10px;
+      display: block;
+      color: #333; /* Dark gray text color */
+    }
+
+    #result {
+      background-color: rgba(255, 255, 255, 0.8); 
+      padding: 15px; 
+      border-radius: 10px; /* Rounded corners */
+      margin-top: 20px;
+      font-size: 18px; 
+      max-width: 300px; 
+      margin-left: auto;
+      margin-right: auto;
+      color: #333; /* Dark gray text color */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="dropdown">
+    <button onclick="toggleDropdown()">Open Menu</button>
+    <div id="dropdownContent">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+
+      <label for="focusInput">Focus for the day:</label>
+      <input type="text" id="focusInput" placeholder="Enter your focus">
+
+      <label for="backgroundImage">Select Background:</label>
+      <select id="backgroundImage">
+        <option value="babyblue.jpg">Background 1</option>
+        <option value="babypink.jpg">Background 2</option>
+        <option value="babyyellow.jpg">Background 3</option>
+      </select>
+
+      <button onclick="saveSettings()">Save Settings</button>
+    </div>
+  </div>
+
+  <div id="result">
+    <h1 id="greeting">Hello!</h1>
+    <div id="quote"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
